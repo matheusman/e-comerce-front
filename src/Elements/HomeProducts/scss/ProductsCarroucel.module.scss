@@ -1,0 +1,32 @@
+@import "../../../sass/index.scss";
+
+.carroucel {
+    display: grid;
+    grid-template-columns: repeat(30, 230px);
+    margin: auto;
+    gap: 20px;
+    transition: $transitionFocus-02;
+    
+}
+
+.sectionCarroucel {
+    position: relative;
+    padding: 0px 70px;
+    margin-top: 20px;
+    user-select: none;
+    overflow: hidden;
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.buttonCarroucelNext {
+    @include buttonCarroucel;
+    right: 10px;
+}
+
+.buttonCarroucelPrev {
+    @include buttonCarroucel;
+    left: 10px;
+}

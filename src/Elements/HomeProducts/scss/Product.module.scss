@@ -1,0 +1,96 @@
+@import "../../../sass/index.scss";
+
+
+.product {
+    margin-top: 40px;
+    width: 225px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.356);
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: $transitionFocus-02;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.30);
+    &:hover {
+        transform: translateY(-10px);
+    }
+    img {
+        display: block;
+        width: 90%;
+        margin: auto;
+        justify-self: center;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        color: $ButtonTextColor;
+        background: $buttonColorBackground;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: $transitionFocus-05;
+        &:hover {
+            background: $buttonColorBackgroundHover;
+        }
+    }
+}
+
+.title {
+    color: $textColorTitleProduct;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-family: $font-family-1;
+}
+
+.datesPrice {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 80px;
+}
+
+.promotion {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    text-decoration-line: strikethrough;
+    color: $textColorPromotionProduct;
+    text-decoration: line-through;
+    position: relative;
+    top: 6px;
+}
+
+.infoPriceProduct {
+    display: flex;
+    gap: 2.5px;
+    align-items: center;
+}
+
+.realPrice {
+    color: $textColorPriceRealProduct;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.realPriceMain {
+    color: $textColorPriceRealProductMain;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.3px;
+}
+
+.infoText {
+    color: $textColorInfoPix;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.15px;
+}

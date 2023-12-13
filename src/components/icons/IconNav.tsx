@@ -1,15 +1,18 @@
 import React from 'react'
 
 type iconNav = {
-    icon : string;
+    img : string;
     color? : string;
-    className: string;
-}
+    className?: string;
+    text?: string;
+    onClick?: () => void;
+  }
 
-function IconNav( { icon, color, className } : iconNav ) {
+function IconNav( { img, color, className, text, ...props} : iconNav ) {
   return (
-    <div className={className}>
-        <img src={icon}></img>
+    <div className={className} {...props}>
+        <img color={color} src={img} />
+        {text && <p>{text}</p>}
     </div>
   )
 }

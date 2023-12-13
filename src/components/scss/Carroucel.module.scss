@@ -1,0 +1,12 @@
+@import "../../sass/index.scss";
+
+
+.next {
+    @include buttonCarroucel;
+    right: 0px
+}
+
+.prev {
+    @include buttonCarroucel;
+    left: 0px;
+}

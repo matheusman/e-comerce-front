@@ -1,17 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton:wght@700&family=Tiro+Telugu&display=swap');
 
-$searchColor: rgba(212, 212, 212, 1); 
-$searchBorderPx: 10px;
-$searchSize: 26px;
-$p-c-1: #ffc89d;
-$p-c-2: rgba(248, 160, 93, 0.562);
+$p-c-1: #24548D;
+$p-c-2: #F1F6FF;
+$p-c-3: #72B2FF;
+$p-c-4: #1A72DC;
+$p-c-5: #0075FF;
+
+$s-c-1: #F9F9F9;
+$s-c-2: #EFEFEF;
+$s-c-3: #CCCCCC;
+$s-c-4: #6D6D6D;
+$s-c-5: #1E1E1E;
+$s-c-6: #F0F5FE;
+$s-c-7: #242424;
+$s-c-8: #797979;
+$s-c-9: #2D2D2D;
+$s-c-10: #FFFFFF;
+$s-c-11: #000000;
+$s-c-12: #000F21;
+
+$t-c-1: #0A5B08;
+$t-c-2: #1D8D19;
+$t-c-3: #50A14E;
+$t-c-4: #DDFFDC;
+$t-c-5: #218111;
+$t-c-6: #F76A6A;
+$t-c-7: #1457099a;
+
+$gradient-1: linear-gradient(180deg, #FFF 0%, #E8E8E8 100%);
+$gradient-2: linear-gradient(180deg, #0075FF 0%, #4070AA 100%);
+$gradient-3: linear-gradient(180deg, #4584FF 0%, #687BA1 100%);
+$gradient-4: linear-gradient(180deg, #5CE081 0%, #3EBF62 100%);
+$gradient-5: linear-gradient(180deg, #3ec464 0%, #2ca14d 100%);
+$gradient-6: linear-gradient(180deg, #004DA8 0%, #003779 100%);
+
 $font-family-1: 'Poppins', sans-serif;
-$font-family-2: 'Tiro Telugu', serif;
+$font-family-2: 'Lekton', sans-serif;
+
 $boxShadowRgba-05: 0.5;
 $boxShadowRgba-04: 0.4;
 $boxShadowRgba-03: 0.3;
 $boxShadowRgba-02: 0.2;
+
 $transitionFocus-05: all 0.5s;
 $transitionFocus-03: all 0.3s;
 $transitionFocus-02: all 0.2s;
+
+$fontWeigth-300: 300;
+$fontWeigth-400: 400;
+$fontWeigth-500: 500;
+
+// HEADER 
+    $colorSearchBorderAnimation: $s-c-12;
+    $colorTextSearch: $s-c-4;
+    $colorSearchBoxShadow: $s-c-5;
+    $colorBgSearch: $s-c-2;
+    $buttonBgSearch: $p-c-1;
+    $BgHeaderColor: $s-c-1;
+    $searchColor: rgb(70, 4, 4); 
+    
+    // HEADER SEARCH
+    $transitionBoxShadowSearch: box-shadow 0.2s;
+    $searchBorderPx: 10px;
+    $searchSize: 26px;
+
+//PRODUCT
+    $textIconColor: $s-c-5;
+    $textColorTitleProduct: $s-c-7;
+    $textColorPromotionProduct: $s-c-4;
+    $textColorPriceRealProduct: $s-c-8;
+    $textColorPriceRealProductMain: $s-c-9;
+    $textColorInfoPix: $t-c-7;
+    $buttonColorBackground: $gradient-4;
+    $buttonColorBackgroundHover: $gradient-5;
+    $ButtonTextColor: $s-c-10;
+    $SectionBackgroundColor: $s-c-1;
+    $EmphasisTextIconColor: $s-c-11;

@@ -1,0 +1,15 @@
+@import "../../../sass/index.scss";
+
+.emphasis {
+    display: flex;
+    gap: 10px;
+}
+
+.iconText {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-family: $font-family-1;
+    color: $s-c-11;
+}

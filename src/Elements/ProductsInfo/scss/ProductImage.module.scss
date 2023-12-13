@@ -1,0 +1,41 @@
+@import "../../../sass/index.scss";
+
+.image {
+    width: 80%;
+    height: 400px;
+}
+
+.carroucelImage {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    img {
+        width: 100%;
+        border: 1px solid $s-c-6;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .divCarroucel {
+        display: grid;
+        grid-template-columns: repeat(20, 100px);
+        gap: 15px;
+        padding: 0px 50px;
+
+    }
+    button {
+        @include buttonCarroucel;
+        width: 50px;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        opacity: 0.4;
+    }
+    .prev {
+        left: 0px;
+    }
+
+    .next {
+        right: 0px;
+    }
+
+}

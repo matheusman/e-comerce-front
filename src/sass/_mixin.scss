@@ -1,0 +1,14 @@
+@mixin buttonCarroucel () {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transitionFocus-05;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@mixin fontCustomize ($weigth, $size, $color) {
+    font-weight: $weigth;
+    font-size: $size;
+    color: $color;
+}

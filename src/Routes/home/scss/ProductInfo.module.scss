@@ -1,0 +1,36 @@
+@import "../../../sass/index.scss";
+
+.productMain {
+    padding-top: 50px;
+    display: grid;
+    width: 95%;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto;
+   
+}
+
+.productImage {
+    grid-column: 1 / 6;
+    justify-content: start;
+    height: 100%;
+    text-align: center;
+}
+
+.productInfo {
+    grid-column: 6 / -1;
+    height: 100%;
+    padding: 20px 30px;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+    background-color: $s-c-1;
+    border-radius: 10px;
+    div {
+        margin-top: 5px;
+    }
+}
+
+.productDesc {
+    grid-column: 1 / -1;
+  
+}

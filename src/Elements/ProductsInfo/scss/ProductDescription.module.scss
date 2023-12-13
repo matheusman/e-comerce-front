@@ -1,0 +1,20 @@
+@import "../../../sass/index.scss";
+
+.description {
+    display: flex;
+    gap: 10px;
+}
+
+.info {
+    width: 100%;
+    background-color: $p-c-2;
+    height: 600px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 20px 30px;
+    ul li {
+        padding: 0px 15px;
+        list-style-type: none;
+        margin-top: 5px;
+    }
+}
