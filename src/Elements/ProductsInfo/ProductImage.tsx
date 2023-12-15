@@ -9,11 +9,9 @@ type ProductImageType = {
     className : string
 }
 
-
-
 function ProductImage({ className } : ProductImageType) {
-  const types = [<img src={product} />, <img src={product} />, <img src={product} />] as any
-  const carroucel = useCarroucel(types, 100)
+  const types = [<img src={product} />, <img src={product} />, <img src={product} />]
+  const carroucel = useCarroucel(types, 150)
   return (
     <div className={className}>
       <div >
@@ -25,14 +23,9 @@ function ProductImage({ className } : ProductImageType) {
               <button className={styles.next}onClick={() => carroucel.nextIndex()}><img src={buttonNext} /></button>
             </div>
             <div style={{ transform: `translate(-${carroucel.number}px, 0px)`}} className={styles.divCarroucel}>
-              <img src={product}/>
-              <img src={product}/>
-              <img src={product}/>
-              <img src={product}/>
-              <img src={product}/>
-              <img src={product}/>
-              <img src={product}/>
-              <img src={product}/>
+              { types.map( item => {console.log(item)
+              return item
+              })}
             </div>
       </div>
     </div>

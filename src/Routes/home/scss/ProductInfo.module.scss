@@ -10,6 +10,7 @@
 }
 
 .productImage {
+    transition: all 0.5s;
     grid-column: 1 / 6;
     justify-content: start;
     height: 100%;

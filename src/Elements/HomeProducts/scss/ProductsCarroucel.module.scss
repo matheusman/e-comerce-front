@@ -5,9 +5,9 @@
     grid-template-columns: repeat(30, 230px);
     margin: auto;
     gap: 20px;
-    transition: $transitionFocus-02;
-    
+    transition: all 1s;
 }
+
 
 .sectionCarroucel {
     position: relative;
@@ -15,6 +15,7 @@
     margin-top: 20px;
     user-select: none;
     overflow: hidden;
+    transition: $transitionFocus-02;
 }
 
 .navLink {

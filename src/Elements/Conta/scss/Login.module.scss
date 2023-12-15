@@ -1,0 +1,139 @@
+@import "../../../sass/index.scss";
+
+$border: 1px solid rgba(0, 0, 0, 0.25); 
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 1200px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    @include fontCustomize(600, 36px, $s-c-12);
+    align-items: center;
+    button {
+        padding: 11px 10px;
+        width: 150px;
+        border-radius: 10px;
+        @include fontCustomize(600, 14px, $s-c-11);
+        border: none;
+        color: $s-c-11;
+        background-color: $s-c-2;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover {
+            background-color: $s-c-11;
+            color: $s-c-2;
+        }
+    }
+}
+
+
+
+.createAccount {
+    background-image: url("../../../assets/img/elearning-online-education-home-modern-vector-illustration-concepts-website-mobile-web.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / 6;
+}
+
+.login {
+    grid-column: 6 / -1;
+    padding: 10px 20px;
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        .input {
+            margin-top: 10px;
+        }
+        input {
+            &:focus {
+                box-shadow: 2px 2px 4px 0px #000f216c;
+                border: 1px solid #0446969f;
+            }
+        }
+    }
+    position: relative;
+
+}
+
+.lost {
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 40px;
+    @include fontCustomize(500, 12px, $s-c-4);
+    p {
+        cursor: pointer;
+        transition: all 0.3s;
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: currentColor;
+            position: relative;
+            bottom: 2px;
+            right: 1px;
+        }
+        &:hover {
+            color: $s-c-5;
+        }
+    }
+    button {
+        width: 150px;
+        padding: 10px 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: $p-c-1;
+        color: $s-c-10;
+        transition: all 0.3s;
+        &:hover {
+            background-color: $p-c-3;
+            cursor: pointer;
+            color: $s-c-11;
+        }
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 80%;
+    margin: auto;
+
+    input {
+        @include fontCustomize(500, 14px, $s-c-11);
+        outline: none;
+        border: $border;
+        padding: 10px 12px;
+        border-radius: 5px;
+    
+    } 
+}
+
+.loginButton {
+    border: $border;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.oauth {
+    display: none;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: #dddddd;
+    border-radius: 8px;
+    @include fontCustomize(600, 16px, $s-c-11);
+    margin: auto;
+}
