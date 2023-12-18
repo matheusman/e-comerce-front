@@ -1,0 +1,22 @@
+@import "../../sass/index.scss";
+
+.button {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 10px;
+    background: #1A72DC;
+    height: 50px;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    &:hover {
+        background-color: #0f4586;
+    }
+}

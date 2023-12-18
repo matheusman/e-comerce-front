@@ -3,13 +3,15 @@ import styles from './scss/header.module.scss'
 import user from '../../assets/svg/perfil-de-usuario (1) 1.svg'
 import shop from '../../assets/svg/021-location 1.svg'
 import bag from '../../assets/svg/g5.svg'
-import IconNav from '../../components/icons/IconNav'
+import IconNav from '../../components/IconNav'
 import searchIcon from '../../assets/svg/pesquisa 1.svg'
 import "./scss/animationHeader.scss"
 import { NavLink } from 'react-router-dom'
+import ClickAcount from '../../Elements/HeaderAcount/ClickAcount'
 
 function Header() {
   const [searchClass, setSearchClass] = React.useState(false);
+  const [click, setClick] = React.useState(false)
   return (
     <header>
       <form className={styles.search}>
@@ -27,7 +29,9 @@ function Header() {
         <nav className={styles.nav}>
             <IconNav className={styles.navigationHeader} img={shop}/>
             <IconNav className={styles.navigationHeader} img={bag}/>
-            <IconNav className={styles.navigationHeader} img={user}/>
+            <IconNav className={`${styles.navigationHeader} ${styles.iconBlock}`} onClick={ () => setClick(!click)} img={user}>
+              {click && <ClickAcount />}
+            </IconNav>
         </nav>
     </header> 
   )

@@ -1,5 +1,8 @@
 @import "../../../sass/index.scss";
 
+body {
+    height: 120vh;
+}
 $border: 1px solid rgba(0, 0, 0, 0.25); 
 
 .content {
@@ -39,11 +42,14 @@ $border: 1px solid rgba(0, 0, 0, 0.25);
     background-size: cover;
     background-position: center;
     grid-column: 1 / 6;
+    transition: all 0.8s;
+    z-index: 1000;
 }
 
 .login {
     grid-column: 6 / -1;
     padding: 10px 20px;
+    transition: all 0.8s;
     form {
         display: flex;
         flex-direction: column;
@@ -116,8 +122,31 @@ $border: 1px solid rgba(0, 0, 0, 0.25);
         border: $border;
         padding: 10px 12px;
         border-radius: 5px;
-    
     } 
+}
+
+.createAccountForm {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.createDiv {
+    display: flex;
+    gap: 20px;
+}
+
+.createInput100 {
+    width: 100%;
+}
+
+.createInput50 {
+    width: 50%;
+}
+
+.createInputStart {
+    width: 100%;
 }
 
 .loginButton {
@@ -125,6 +154,24 @@ $border: 1px solid rgba(0, 0, 0, 0.25);
     padding: 10px;
     border-radius: 4px;
     font-weight: 600;
+}
+
+.createButton {
+        margin-top: 20px;
+        width: 150px;
+        margin-left: auto;
+        padding: 10px 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: $p-c-1;
+        color: $s-c-10;
+        transition: all 0.3s;
+        &:hover {
+            background-color: $p-c-3;
+            cursor: pointer;
+            color: $s-c-11;
+        }
+
 }
 
 .oauth {

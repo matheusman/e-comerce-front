@@ -4,8 +4,9 @@ import ProductsCarroucel from '../../Elements/HomeProducts/ProductsCarroucel';
 
 function Home() {
   return (
-    <main>
-        <section className={styles.sectionMain} >
+    <main className="animeBottom">
+        <section className={`${styles.sectionMain}`} >
+          <div className={styles.circles}></div>
         </section>
         <ProductsCarroucel />
     </main>

@@ -1,0 +1,31 @@
+@import "../../../sass/index.scss";
+
+.alert {
+    $padding: 5px;
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    background-color: $s-c-3;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+    z-index: 2000;
+    height: 190px;
+    transition: all 0.2s;
+    div {
+        transition: all 0.2s;
+        background-color: $s-c-2;
+        color: $s-c-11;
+        width: 100%;
+        border-radius: 10px;
+        padding: $padding;
+        &:hover {
+            padding: calc($padding + 3px);
+            background-color: $p-c-3;
+        }
+    }
+}

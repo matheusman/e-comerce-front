@@ -11,6 +11,11 @@ body {
     font-family: $font-family-1;
 }
 
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
 @keyframes animeBottom {
     from {
         transform: translateY(-20px);

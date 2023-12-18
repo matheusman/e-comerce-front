@@ -1,5 +1,5 @@
 import React from 'react'
-import IconNav from '../../components/icons/IconNav'
+import IconNav from '../../components/IconNav'
 import info from '../../assets/svg/info 1.svg'
 import styles from './scss/ProductComents.module.scss';
 

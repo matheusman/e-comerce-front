@@ -5,7 +5,7 @@ import creditCard from '../../assets/svg/015-credit card 1.svg'
 import addCart from '../../assets/svg/001-add cart 1.svg'
 import delivery from '../../assets/svg/017-delivery 2.svg'
 import plusCard from '../../assets/svg/Vector.svg'
-import IconNav from '../../components/icons/IconNav'
+import IconNav from '../../components/IconNav'
 import quantity from '../../assets/svg/caixas (1) 1.svg'
 import plus from '../../assets/svg/mias 1.svg'
 import undred from '../../assets/svg/undred.svg'
@@ -29,7 +29,7 @@ function ProductInfoMain({ className } : ProductInfoType) {
         }
     }
   return (
-    <main className={className}>
+    <main className={`animeBottom ${className}`}>
             <div>
                 <p className={styles.title}>Fonte gamer 30W bronze master teste de string</p>
             </div>

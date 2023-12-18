@@ -6,13 +6,15 @@ type iconNav = {
     className?: string;
     text?: string;
     onClick?: () => void;
+    children? : React.ReactNode
   }
 
-function IconNav( { img, color, className, text, ...props} : iconNav ) {
+function IconNav( { img, color, className, text, children, ...props} : iconNav ) {
   return (
     <div className={className} {...props}>
         <img color={color} src={img} />
         {text && <p>{text}</p>}
+        {children}
     </div>
   )
 }

@@ -1,0 +1,8 @@
+@import "../../sass/index.scss";
+
+.radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include fontCustomize(500, 14px, $s-c-11);
+}
