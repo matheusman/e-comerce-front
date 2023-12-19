@@ -1,0 +1,10 @@
+@import "../../../sass/index.scss";
+
+.app {
+    padding: $app;
+}
+
+.comp {
+    @include box ();
+
+}

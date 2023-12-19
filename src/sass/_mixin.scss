@@ -12,3 +12,20 @@
     font-size: $size;
     color: $color;
 }
+
+@mixin box () {
+    margin-top: 50px;
+  display: flex;
+  width: 70%;
+  padding: 10px 20px;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #fbfbfb;
+  margin-top: $top;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin buttonsFocus {
+    box-shadow: 2px 2px 4px 0px #000f216c;
+    border: 1px solid #0446969f;
+}

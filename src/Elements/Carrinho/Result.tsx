@@ -32,9 +32,9 @@ function Result() {
         </div>
         <div className={styles.elements}>
           <div className={styles.pixSquares}>
-            <p className={styles.valuePix}>Valor à Vista no</p>
+            <p className={styles.valuePix}>Valor à Vista no <strong>PIX</strong></p>
             <h3>R$ 1.250,00</h3>
-            <p>(Economize: R$ 254,00)</p>
+            <p className={styles.economy}>(Economize: R$ 254,00)</p>
           </div>
           <Button text="IR PARA O PAGAMENTO" />
         </div>

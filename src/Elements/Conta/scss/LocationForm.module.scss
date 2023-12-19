@@ -1,0 +1,40 @@
+@import "../../../sass/index.scss";
+
+.locationForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($s-c-5, 0.8);
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+        color: $s-c-11;
+        background-color: $s-c-6;
+        border-radius: 10px;
+        padding: 15px;
+        button {
+            border-radius: 5px;
+            width: 150px;
+            @include fontCustomize(500, 14px, $s-c-6);
+            padding: 10px;
+            border: none;
+            margin-top: 20px;
+            background-color: $p-c-5;
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover {
+                background-color: $p-c-3;
+            }
+            align-self: flex-end;
+        }
+    }
+}
+
+

@@ -1,0 +1,123 @@
+@import "../../../sass/index.scss";
+
+.icon {
+    display: flex;
+    gap: 10px;
+}
+
+.datas {
+    width: 80%;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 650px;
+    background-color: $s-c-6;
+    display: flex;
+    margin-top: 40px;
+    overflow: auto;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.send {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+    gap: 20px;
+    
+    .inputFrete {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 50px;
+        input {
+            width: 20px;
+            height: 20px;
+            margin-right: 50px;
+        }
+    }
+}
+
+.validate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.buttonFrete {
+    display: flex;  
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    @include fontCustomize(600, 12px, $s-c-10);
+}
+
+.trocar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+.alternate {
+    margin-top: 10px;
+}
+
+.blue {
+    background-color: $p-c-3;
+    &:hover {
+        background-color: $p-c-4;
+    }
+}
+.red {
+    background-color: rgba(233, 121, 121, 0.808);
+    &:hover {
+        background-color: rgb(241, 106, 106);
+    }
+}
+.gray {
+    background-color: $s-c-11;
+    &:hover {
+        background-color: $s-c-5;
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 3px;
+    input {
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        padding: 10px;
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+        &:focus {
+            @include buttonsFocus;
+        }
+    }
+}
+
+

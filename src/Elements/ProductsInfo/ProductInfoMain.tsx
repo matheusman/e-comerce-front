@@ -7,27 +7,15 @@ import delivery from '../../assets/svg/017-delivery 2.svg'
 import plusCard from '../../assets/svg/Vector.svg'
 import IconNav from '../../components/IconNav'
 import quantity from '../../assets/svg/caixas (1) 1.svg'
-import plus from '../../assets/svg/mias 1.svg'
-import undred from '../../assets/svg/undred.svg'
-
+import Quantity from '../../components/Quantity'
 
 type ProductInfoType = {
     className : string
 }
 
 function ProductInfoMain({ className } : ProductInfoType) {
-    const [quantityValue, setQuatityValue] = React.useState(1)
     const [parcela, setParcela] = React.useState(false)
-
-    function next () {
-        setQuatityValue(quantityValue + 1)
-    }
-
-    function prev () {
-        if (quantityValue > 1) {
-            setQuatityValue(quantityValue - 1)
-        }
-    }
+    
   return (
     <main className={`animeBottom ${className}`}>
             <div>
@@ -65,7 +53,6 @@ function ProductInfoMain({ className } : ProductInfoType) {
                         
                     </div>
                     
-                    
                 </div>
                 
             </div>
@@ -82,15 +69,7 @@ function ProductInfoMain({ className } : ProductInfoType) {
                         </div>
             <div>
                 <IconNav color='black' className={styles.quantity} text={"Quantidade:"} img={quantity} />
-                <div className={styles.quantityInterage}>
-                    <IconNav img={undred} onClick={() => {
-                        prev()
-                    }} />
-                    <p>{quantityValue}</p>
-                    <IconNav img={plus} onClick={ () => {
-                        next()
-                    }}/>
-                </div>
+                <Quantity />
             </div>
 
             <div className={styles.shop}>

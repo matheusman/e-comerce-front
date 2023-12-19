@@ -1,21 +1,13 @@
 @import "../../../sass/index.scss";
 
-$size: 85%;
+$size: 15px;
 
 .app {
-  padding: 40px;
+  padding: $app;
 }
 
 .car {
-  margin-top: 50px;
-  display: flex;
-  width: 70%;
-  padding: 10px 20px;
-  flex-direction: column;
-  border-radius: 10px;
-  background: #fbfbfb;
-  margin-top: 20px;
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  @include box ();
 }
 
 .icons {
@@ -29,9 +21,9 @@ $size: 85%;
   flex-direction: column;
   border-radius: 10px;
   background: #f9fbff;
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top: 10px;
+  margin-top: $size;
   padding: 20px;
   .lines {
     display: flex;
@@ -40,13 +32,13 @@ $size: 85%;
 }
 
 .products {
+  margin-top: $size;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px 20px;
   img {
     width: 150px;
     height: 150px;
@@ -54,12 +46,18 @@ $size: 85%;
   }
   .infoProduct {
     grid-column: 2 / 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     .lettersProduct {
       @include fontCustomize(400, 14px, $s-c-11);
     }
   }
   .quantity {
     grid-column: 8 / 10;
+    flex-direction: column;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     .quantityControl {
@@ -67,6 +65,7 @@ $size: 85%;
       align-items: center;
       justify-content: center;
       flex-direction: row;
+      cursor: pointer;
       gap: 10px;
       div {
         display: flex;
@@ -82,14 +81,9 @@ $size: 85%;
       }
     }
   }
-  .end {
-    grid-column: 10 / -1;
-  }
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+}
+.end {
+  grid-column: 10 / -1;
 }
 
 .freteValues {
@@ -97,13 +91,14 @@ $size: 85%;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   gap: 40px;
+  margin-top: $size;
 }
 
 .valueToLocation {
   display: grid;
   border: none;
   border-radius: 10px;
-  box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px;
   position: relative;
   button {
@@ -116,13 +111,12 @@ $size: 85%;
 .absolute {
   position: absolute;
   right: 40px;
-  top: 192px;
+  top: 195px + $size;
 }
 
 .result {
   position: sticky;
-  top: 10px;
-  height: 500px;
+    height: 500px;
   border-radius: 10px;
   background-color: $p-c-2;
   border-radius: 10px;
@@ -151,6 +145,9 @@ $size: 85%;
   align-self: flex-start;
   justify-content: space-between;
   width: 100%;
+  &:nth-of-type(1) {
+    margin-top: 5px;
+  }
   p {
     @include fontCustomize(500, 12px, $s-c-4);
   }
@@ -175,8 +172,15 @@ $size: 85%;
   align-items: center;
   padding: 20px 10px;
   border-radius: 10px;
+  width: 80%;
+  @include fontCustomize(400, 14px, $t-c-3);
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  color: $t-c-3;
+  h3 {
+    @include fontCustomize(600, 26px, $t-c-3);
+  }
+  .economy {
+    @include fontCustomize(400, 12px, $t-c-3);
+  }
 }
 
 .elements {
@@ -185,7 +189,7 @@ $size: 85%;
   flex-direction: column;
   justify-content: center;
   height: 65%;
-  gap: 20px;
+  gap: 40px;
 }
 
 .resultContent {
@@ -206,9 +210,9 @@ $size: 85%;
 .device {
   margin: auto;
   width: 100%;
-  margin-top: 5px;
+  margin-top: 10px;
   text-align: center;
-  @include fontCustomize(400, 10px, $s-c-11);
+  @include fontCustomize(400, 12px, $s-c-11);
 }
 
 .valuePix {
@@ -223,17 +227,19 @@ $size: 85%;
   color: $s-c-10;
   transition: all 0.2s;
   cursor: pointer;
-  &:nth-of-type(1) {
-    background-color: rgb(245, 101, 101);
-    &:hover {
-      background-color: rgb(250, 78, 78);
-    }
+}
+
+.red {
+  background-color: rgba(233, 121, 121, 0.808);
+  &:hover {
+    background-color: rgb(241, 106, 106);
   }
-  &:nth-of-type(2) {
-    background-color: $p-c-4;
-    &:hover {
-      background-color: $p-c-5;
-    }
+}
+
+.gray {
+  background-color: $s-c-4;
+  &:hover {
+    background-color: $s-c-5;
   }
 }
 
@@ -256,13 +262,12 @@ $size: 85%;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   margin-top: 20px;
+  gap: 10px;
   @include fontCustomize(300, 12px, $s-c-4);
-  div {
-    position: relative;
-    top: 28px;
-  }
+ 
   .color {
     width: 150px;
     align-self: flex-end;
@@ -284,5 +289,13 @@ $size: 85%;
 }
 
 .infoTable {
+  @include fontCustomize(300, 14px, $s-c-4);
+}
+
+.endTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
   @include fontCustomize(300, 14px, $s-c-4);
 }

@@ -1,0 +1,20 @@
+@import "../../../sass/index.scss";
+
+.plus {
+    display: flex;
+    border: none;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: $p-c-3;
+    @include fontCustomize (600, 14px, $s-c-10);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover {
+        background-color: $p-c-4;
+    }
+}
+

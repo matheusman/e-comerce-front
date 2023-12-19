@@ -2,7 +2,16 @@
 
 .radio {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
     align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     @include fontCustomize(500, 14px, $s-c-11);
+    margin-top: 10px;
+    label {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 }

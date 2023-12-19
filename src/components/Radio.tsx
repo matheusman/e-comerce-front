@@ -5,14 +5,20 @@ type RadioType = {
     className? : string;
     name: string;
     label: string;
+    value: string;
 }
 
-function Radio({ className, label, name, ...props } : RadioType) {
+function Radio({ className, label, name, value, ...props } : RadioType) {
 
   return (
     <div className={`${className} ${styles.radio}`}>
         <input id={name} name={name} type="radio" { ...props} />
-        <label htmlFor={name}>{label}</label>
+        <label htmlFor={name}>
+          <div>
+              {value}
+          </div>
+            {label}
+        </label>
     </div>
   )
 }

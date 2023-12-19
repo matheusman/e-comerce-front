@@ -1,0 +1,121 @@
+@import "../../sass/index.scss";
+
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items : center;
+    align-items: center;
+    padding: 15px 10px;
+    width: 100%;
+    background-color: $BgHeaderColor;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.iconText {
+    font-family: $font-family-2;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px; /* 20.833% */
+    letter-spacing: 2px;
+    color: rgba(2, 22, 17, 1);
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.navigationHeader {
+    display: flex;
+    width: 60px;
+    height: 50px;
+    padding: 10px 15px ;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    transition: all 0.4s;
+    &:hover {
+        background-color: $s-c-3;
+        padding-top: 0.5px;
+    }
+}
+
+.iconBlock {
+    position: relative;
+}
+
+.search {
+    display: flex;
+
+    .inputSearch {
+        transition: $transitionBoxShadowSearch ;
+        color: $colorTextSearch;
+        font-family: $font-family-1;
+        padding: 20px 15px;
+        border: none;
+        width: 150px;
+        height: $searchSize;
+        border-bottom-left-radius: $searchBorderPx;
+        border-top-left-radius: $searchBorderPx;
+        background-color: $searchColor;
+        outline: none;
+        font-size: 14px;
+        background-color: $colorBgSearch;
+        transition: $transitionFocus-03;
+        &::placeholder {
+            letter-spacing: -0.1px;
+            font-family: $font-family-1;
+            color: $colorTextSearch;
+        }
+    }
+    .buttonSearch {
+        transition: $transitionBoxShadowSearch ;
+        background-color: $buttonBgSearch;
+        border: none;
+        border-top-right-radius: $searchBorderPx;
+        border-bottom-right-radius: $searchBorderPx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 15px;
+        height: $searchSize;
+        transition: $transitionFocus-03;
+        cursor: pointer;
+        
+        img {
+            user-select: none;
+            height: 30px;
+            width: 25px;
+            color: white;
+        }
+    }
+    .selectButton {
+        border-top: 1px solid $colorSearchBorderAnimation;
+        border-right: 1px solid $colorSearchBorderAnimation;
+        border-bottom: 1px solid $colorSearchBorderAnimation;
+        box-shadow: 0px  1px 6px 0px rgba($colorSearchBoxShadow, 25%);
+        transform: translateX(100px);
+    }
+    .selectInput {
+        width: 300px;
+        transform: translateX(100px);
+        border-top: 1px solid $colorSearchBorderAnimation;
+        border-left: 1px solid $colorSearchBorderAnimation;
+        border-bottom: 1px solid $colorSearchBorderAnimation;
+        box-shadow: 0px  1px 6px 2px rgba($colorSearchBoxShadow, 25%);
+    }
+}

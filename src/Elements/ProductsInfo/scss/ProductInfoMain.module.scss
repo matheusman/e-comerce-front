@@ -146,22 +146,7 @@
     @include fontCustomize($fontWeigth-400, 12px, $s-c-4);
 }
 
-.quantityInterage {
-    transition: all 0.5s;
-    margin-top: 10px;
-    margin-left: 10px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    p {
-        @include fontCustomize($fontWeigth-500, 20px, $s-c-7);
-        width: 20px;
-        text-align: center;
-    }
-    img {
-        cursor: pointer;
-    }
-}
+
 
 .frete {
     margin-top: 10px;

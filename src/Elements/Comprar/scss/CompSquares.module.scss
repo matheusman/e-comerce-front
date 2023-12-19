@@ -1,0 +1,24 @@
+@import "../../../sass/index.scss";
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.text {
+    display: flex;
+    gap: 5px;
+}
+
+.green {
+    color: $t-c-1;
+}
+
+.title {
+    @include fontCustomize(500, 18px, $s-c-5);
+}
